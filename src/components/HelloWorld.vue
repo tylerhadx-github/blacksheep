@@ -12,7 +12,10 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
+          This page is being being grown.
+        </p>
+        <p>
+          For information please <a href="mailto:sales@blacksheepagronomy.com">Email Us</a>!
         </p>
       </v-col>
 
