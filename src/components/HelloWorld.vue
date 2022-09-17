@@ -1,58 +1,32 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <v-container>
+    <v-row class="text-center">
+      <v-col cols="12">
+                <img src="data:image/png;base64,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">
+
+      </v-col>
+
+      <v-col class="mb-4">
+        <h1 class="display-2 font-weight-bold mb-3">
+          Welcome to Black Sheep Agronomy
+        </h1>
+
+        <p class="subheading font-weight-regular">
+          For help and collaboration with other Vuetify developers,
+        </p>
+      </v-col>
+
+      
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+  export default {
+    name: 'HelloWorld',
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+    data: () => ({
+     
+    }),
+  }
+</script>
